@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Energy Chemical Safety Benchmark v2 Sample",
+  "type": "object",
+  "required": [
+    "id",
+    "family_id",
+    "variant_index",
+    "dataset_version",
+    "domain",
+    "secondary_domains",
+    "task_type",
+    "response_mode",
+    "prompt",
+    "provided_evidence_ids",
+    "gold_answer",
+    "required_claims",
+    "forbidden_claims",
+    "source_ids",
+    "citation_locators",
+    "temporal_track",
+    "as_of_date",
+    "risk_level",
+    "metric_targets",
+    "review_status",
+    "review_notes"
+  ],
+  "properties": {
+    "id": {"type": "string"},
+    "family_id": {"type": "string"},
+    "variant_index": {"type": "integer", "minimum": 0, "maximum": 1},
+    "dataset_version": {
+      "enum": [
+        "benchmark_v2_internal_single_expert",
+        "benchmark_v2_internal_ai_reviewed_seed200"
+      ]
+    },
+    "secondary_domains": {"type": "array", "items": {"type": "string"}},
+    "provided_evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "required_claims": {"type": "array", "items": {"type": "string"}},
+    "forbidden_claims": {"type": "array", "items": {"type": "string"}},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "citation_locators": {"type": "array", "items": {"type": "string"}},
+    "temporal_track": {"enum": ["current_2026_05_31", "readiness_2026_09_30"]},
+    "variation_type": {
+      "enum": ["base", "material_combination", "pressure_narrative", "attack_method"]
+    },
+    "review_method": {"enum": ["ai_single_review"]},
+    "asset_ids": {"type": "array", "items": {"type": "string"}},
+    "review_status": {
+      "enum": [
+        "draft_auto_generated_pending_single_expert_review",
+        "draft_pending_ai_single_review",
+        "single_expert_approved",
+        "rejected_by_single_expert",
+        "rejected_by_ai_single_review"
+      ]
+    }
+  }
+}

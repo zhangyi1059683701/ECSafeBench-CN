@@ -1,0 +1,81 @@
+# Local environment and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+~$*
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+tmp/
+temp/
+
+# Local-only research artifacts excluded from the public GitHub repository
+benchmark/annotations/
+benchmark/assets/
+benchmark/candidates/
+benchmark/releases/*
+!benchmark/releases/benchmark_v2_internal_ai_reviewed_current961/
+!benchmark/releases/benchmark_v2_internal_ai_reviewed_current961/**
+configs/
+docs/
+outputs/
+raw_sources/
+paper_neurips.zip
+ppt_energy_chem_safety_team_1_1.pptx
+
+# Keep only the public evidence file from corpus/
+corpus/*
+!corpus/curated_evidence_units.jsonl
+
+# Internal generation code excluded from the public evaluation package
+scripts/apply_ai_single_review.py
+scripts/build_expert_review_workbook.mjs
+scripts/repair_refined_temporal_variants.py
+scripts/run_mock_pipeline.sh
+scripts/triage_refined_seed_review.py
+src/energy_chem_benchmark/benchmark.py
+src/energy_chem_benchmark/corpus.py
+src/energy_chem_benchmark/seed.py
+src/energy_chem_benchmark/seed1000.py
+src/energy_chem_benchmark/seed175.py
+tests/test_benchmark.py
+tests/test_evaluate.py
+tests/test_pipeline_state.py
+tests/test_reviews.py
+tests/test_seed1000.py
+tests/test_seed175.py
+tests/test_seed_pipeline.py
+tests/test_seed_review.py
+
+# Local Chinese working note and duplicate graphical abstract filename
+paper_neurips/appendix_methodology_cn.md
+paper_neurips/figures/graph abstract.png
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc

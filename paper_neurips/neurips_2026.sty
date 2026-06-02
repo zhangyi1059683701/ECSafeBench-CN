@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2026}[2026/06/02 local NeurIPS-style drafting package]
+
+\newif\if@preprint
+\@preprintfalse
+\DeclareOption{preprint}{\@preprinttrue}
+\DeclareOption*{}
+\ProcessOptions\relax
+
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{times}
+\RequirePackage{natbib}
+\RequirePackage{fancyhdr}
+\RequirePackage{titlesec}
+\RequirePackage{authblk}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand\Authfont{\large}
+\renewcommand\Affilfont{\small}
+\setlength{\affilsep}{0.4em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\if@preprint
+  \fancyhead[C]{Preprint. Under review.}
+\else
+  \fancyhead[C]{Conference paper}
+\fi
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.7em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.7em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{0.7em}{}
+
+\newcommand{\And}{\qquad}
+\newcommand{\AND}{\qquad}
+
+\AtBeginDocument{
+  \bibliographystyle{plainnat}
+}

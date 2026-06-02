@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "energy-chem-benchmark"
+version = "0.1.0"
+description = "Evaluation utilities for ECSafeBench-CN, an energy and chemical process-safety LLM benchmark"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+ocr = [
+  "Pillow>=10",
+  "pypdfium2>=4.30",
+  "rapidocr-onnxruntime>=1.3.24",
+]
+
+[project.scripts]
+energy-chem-benchmark = "energy_chem_benchmark.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,18 @@
+{
+  "dataset_version": "benchmark_v2_internal_ai_reviewed_current961",
+  "published_at": "2026-06-01T12:29:05.702768+00:00",
+  "samples": 961,
+  "families": 645,
+  "variants": 316,
+  "base_seed175_samples": 175,
+  "approved_expansion_samples": 786,
+  "review_method": "ai_single_review",
+  "author_model": "gpt-5.4 for expansion/repair generation",
+  "review_model": "gpt-5.4-mini for AI single review",
+  "release_tier": "internal_only",
+  "human_expert_verified": false,
+  "statistics": "benchmark/releases/benchmark_v2_internal_ai_reviewed_current961/composition_statistics.csv",
+  "methodology": "benchmark/releases/benchmark_v2_internal_ai_reviewed_current961/methodology_and_composition.md",
+  "evaluation_protocol": "benchmark/releases/benchmark_v2_internal_ai_reviewed_current961/data_construction_and_accuracy_evaluation_protocol.md",
+  "evidence_file": "corpus/curated_evidence_units.jsonl"
+}
